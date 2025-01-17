@@ -31,9 +31,16 @@
   );
 
   module.exports = (req, res) => {
-    res.status(200).send("Bienvenido a la página principal de stack-vercel-back!");
+    if (req.url === '/') {
+      // Cuando se accede a la raíz, se muestra un mensaje personalizado.
+      res.status(200).send("Bienvenido a la API de stack-vercel-back!");
+    } else {
+      // Aquí manejarías otras rutas si las tienes.
+      res.status(404).send("Ruta no encontrada");
+    }
   };
   
+
   // Ruta para /api
   app.get('/api', (req, res) => {
     res.json({
