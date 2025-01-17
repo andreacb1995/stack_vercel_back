@@ -30,7 +30,10 @@
     })
   );
 
-
+  module.exports = (req, res) => {
+    res.status(200).send("Bienvenido a la página principal de stack-vercel-back!");
+  };
+  
   // Ruta para /api
   app.get('/api', (req, res) => {
     res.json({
