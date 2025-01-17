@@ -32,7 +32,7 @@
 
   // Ruta principal para servir index.html
   app.get('/', (req, res) => {
-    res.status(200).send("Bienvenido a la API de stack-vercel-back!");
+    res.status(200).send("Bienvenido al dominio de stack-vercel-back!");
   });
 
   // Ruta para /api
